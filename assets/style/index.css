@@ -1,5 +1,6 @@
 :root {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --pink: rgb(156, 39, 176);
 }
 
 body {
@@ -122,12 +123,13 @@ hr {
     margin-bottom: 5%;
 }
 
-.intro section div img {
+#clusterDiv img {
     height: fit-content;
-    width: 50vw;
+    width: 45vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 3%;
 }
 
 #introRightBG {
@@ -175,7 +177,7 @@ hr {
 }
 
 .allpink {
-    background-color: rgb(156, 39, 176);
+    background-color: var(--pink);
 }
 
 .oneOfThree {
@@ -199,10 +201,15 @@ hr {
 }
 
 
-.notAllPink div {
-    background-color: rgb(156, 39, 176);
-    ;
+.notAllPink > div {
+    background-color: var(--pink);
+    display: flex;
+    gap: 5%;
 }
+/* .notAllPink > div {
+    background-color: var(--pink);
+    display: flex;
+} */
 
 .oneOfThreePerson {
     display: flex;
@@ -221,14 +228,18 @@ hr {
 
 .oneOfThreelogoText {
     font-size: clamp(.6rem, max(1.5vw, 1.5vh), 1.1rem);
-    line-height: 10%;
     color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0%;
 }
 
 .normalText {
     font-size: clamp(.6rem, max(1.5vw, 1.5vh), 1.1rem);
     color: rgb(255, 255, 255);
-    line-height: 10%;
+}
+.oneOfThreelogoTextSolid {
+    font-size: clamp(.6rem, max(1.5vw, 1.5vh), 1.1rem);
+    color: rgb(255, 255, 255);
+    margin-top: 0%;
 }
 
 .oneOfThreePerson div {
@@ -341,17 +352,27 @@ hr {
     flex-direction: column;
 }
 
-#three{
+#three {
     display: flex;
     flex-direction: column-reverse;
 }
-#two img, #three img{
+
+#two img,
+#three img {
     margin-left: 25%;
 }
 
 @media screen and (min-width: 425px) {
-    #two,#three{flex-direction: row;}
-    #two img,#three img{margin-left: 0;}
+
+    #two,
+    #three {
+        flex-direction: row;
+    }
+
+    #two img,
+    #three img {
+        margin-left: 0;
+    }
 }
 
 
@@ -402,14 +423,15 @@ hr {
     display: none;
 } */
 
-.footerOneOfThree{
+.footerOneOfThree {
     padding: 5%;
 }
 
-.footerOneOfThree div{
+.footerOneOfThree div {
     border-left: 6px solid rgb(255, 255, 255);
 }
-.footerOneOfThree div p{
+
+.footerOneOfThree div p {
     padding: 10%;
     text-wrap: nowrap;
 }
@@ -419,39 +441,44 @@ hr {
     color: rgb(255, 255, 255);
     line-height: 100%;
 }
-footer .allpink{
+
+footer .allpink {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.socialMedia{
+.socialMedia {
     text-align: center;
     padding: 0% 10% 5% 10%;
 }
-.socialMedia > img{
+
+.socialMedia>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.socialMediaIcons{
+.socialMediaIcons {
     display: flex;
     justify-content: center;
     gap: 1%;
 }
-.socialMediaIcons img{
-    max-height:  clamp(1.3rem, 4vw, 3rem);
+
+.socialMediaIcons img {
+    max-height: clamp(1.3rem, 4vw, 3rem);
     filter: invert(100%);
 }
 
-.about{
+.about {
     padding: 5%;
-    background-color: rgb(156, 39, 176);
+    background-color: var(--pink);
 }
-.about > div{
+
+.about>div {
     padding: 5%;
 }
+
 .footerHero {
     display: flex;
     flex-direction: column;
@@ -505,6 +532,9 @@ footer .allpink{
     .notAllPink {
         display: flex;
     }
+    .notAllPink > div {
+        flex-direction: column;
+    }
 
     .ourNumber section {
         flex-wrap: nowrap;
@@ -518,7 +548,8 @@ footer .allpink{
         padding-top: 5%;
         padding-bottom: 5%;
     }
-    .projects{
+
+    .projects {
         background-image: none;
     }
 
@@ -529,16 +560,20 @@ footer .allpink{
     .projectsText {
         background-image: none;
     }
+
     .footerHero {
         display: flex;
         flex-direction: column;
     }
-    .socialMedia{
+
+    .socialMedia {
         padding: 0% 15% 5% 15%;
     }
+
     .about {
         gap: 0%;
     }
+
     /* .projectsImg {
         display: block;
     } */
@@ -553,7 +588,8 @@ footer .allpink{
     .footerExploreItems {
         display: block;
     }
-    .socialMedia{
+
+    .socialMedia {
         padding: 0% 20% 5% 20%;
     }
 }
