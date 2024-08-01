@@ -89,6 +89,133 @@ nav {
 }
 
 
+/* #clusterDiv img {
+    height: fit-content;
+    width: 45vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+} */
+
+
+.clusterOfImagesAnimated {
+    width: 50vw;
+    height: 54.42vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#bigRedCircleRotating {
+    width: 91.07%;
+    height: auto;
+    position: absolute;
+    right: 7.77%;
+    top: 12.5%;
+    animation: rotate 20s ease-in-out infinite;
+    transform-origin: 57.31% 41.42%;
+    z-index: 0;
+}
+
+#topLeftBlueSmallToBig {
+    position: absolute;
+    height: auto;
+    width: 33.65%;
+    left: 3%;
+    top: 4.95%;
+    z-index: -.1;
+}
+
+.popup-box {
+    width: 100px;
+    height: 100px;
+    transform: scale(0);
+    animation: popup .9s forwards, bounceZ 1s .9s 1;
+}
+
+
+#topMidOrange {
+    position: absolute;
+    height: auto;
+    width: 33.65%;
+    right: 33.63%;
+    top: 0%;
+    z-index: -.1;
+    animation: popup .8s forwards, bounceZ 1s .8s 1;
+}
+
+#topRightOrangePink {
+    position: absolute;
+    height: auto;
+    width: 37%;
+    right: 0%;
+    top: 1.37%;
+    z-index: -.1;
+    animation: bounceZ 1s 1;
+}
+
+#solidCluster {
+    position: absolute;
+    height: auto;
+    width: 37.96%;
+    top: 35.16%;
+    right: 0;
+    z-index: -.1;
+}
+
+#bottomLeftPink {
+    position: absolute;
+    height: auto;
+    width: 36.32%;
+    bottom: 10.16%;
+    right: 59.79%;
+    z-index: -.1;
+    animation: popup 1s forwards, bounceZ 1s 1s 1;
+}
+
+#bluePlus {
+    position: absolute;
+    height: auto;
+    width: 4.78%;
+    bottom: 16.1%;
+    right: 27.45%;
+    z-index: -.1;
+    animation: rotate 10s linear infinite;
+}
+
+#darkPinkPlus {
+    position: absolute;
+    height: auto;
+    width: 4.78%;
+    top: 35.02%;
+    left: 3.28%;
+    z-index: -.1;
+    animation: rotate 3s linear infinite;
+}
+
+#pinkPlus {
+    position: absolute;
+    height: auto;
+    width: 4.78%;
+    bottom: 24.17%;
+    left: 19.73%;
+    z-index: -.1;
+    animation: rotate 8s linear infinite;
+}
+
+#clusterText {
+    position: absolute;
+    height: auto;
+    width: 52.61%;
+    bottom: 43.40%;
+    left: 26.45%;
+    z-index: -.1;
+}
+
 #introText {
     margin: 10%;
     margin-left: 5%;
@@ -123,14 +250,6 @@ hr {
     margin-bottom: 5%;
 }
 
-#clusterDiv img {
-    height: fit-content;
-    width: 45vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3%;
-}
 
 #introRightBG {
     position: absolute;
@@ -144,7 +263,6 @@ hr {
     left: 0;
     max-width: 20vw;
 }
-
 
 .blackPinkAlt section {
     padding: 5%;
@@ -187,6 +305,7 @@ hr {
 
 #ff {
     width: 5vw;
+    /* animation: fastForward 1.5s ease-in-out infinite; */
 }
 
 .oneOfThreeHeading {
@@ -201,15 +320,11 @@ hr {
 }
 
 
-.notAllPink > div {
+.notAllPink>div {
     background-color: var(--pink);
     display: flex;
     gap: 5%;
 }
-/* .notAllPink > div {
-    background-color: var(--pink);
-    display: flex;
-} */
 
 .oneOfThreePerson {
     display: flex;
@@ -236,6 +351,7 @@ hr {
     font-size: clamp(.6rem, max(1.5vw, 1.5vh), 1.1rem);
     color: rgb(255, 255, 255);
 }
+
 .oneOfThreelogoTextSolid {
     font-size: clamp(.6rem, max(1.5vw, 1.5vh), 1.1rem);
     color: rgb(255, 255, 255);
@@ -362,37 +478,6 @@ hr {
     margin-left: 25%;
 }
 
-@media screen and (min-width: 425px) {
-
-    #two,
-    #three {
-        flex-direction: row;
-    }
-
-    #two img,
-    #three img {
-        margin-left: 0;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 .projectsTextFirst {
     background-image: url("../images/last-1.png");
@@ -513,6 +598,25 @@ footer .allpink {
 }
 
 
+
+
+
+
+
+
+@media screen and (min-width: 425px) {
+
+    #two,
+    #three {
+        flex-direction: row;
+    }
+
+    #two img,
+    #three img {
+        margin-left: 0;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .right button {
         display: block;
@@ -532,7 +636,8 @@ footer .allpink {
     .notAllPink {
         display: flex;
     }
-    .notAllPink > div {
+
+    .notAllPink>div {
         flex-direction: column;
     }
 
@@ -577,6 +682,14 @@ footer .allpink {
     /* .projectsImg {
         display: block;
     } */
+    .clusterOfImagesAnimated {
+        width: 200vw;
+    }
+
+    #bluePlus {
+        bottom: auto;
+        top: 79%;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -591,5 +704,82 @@ footer .allpink {
 
     .socialMedia {
         padding: 0% 20% 5% 20%;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    #bluePlus {
+        bottom: auto;
+        top: 84%;
+    }
+    #pinkPlus {
+        bottom: 25.57%;
+    }
+}
+
+
+
+
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(.25);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceZ {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(.97, .97);
+    }
+
+    50% {
+        transform: scale(1, 1);
+    }
+
+    75% {
+        transform: scale(.99, .99);
+    }
+}
+
+@keyframes fastForward {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    33% {
+        transform: translateX(10px);
+        opacity: 1;
+    }
+    66% {
+        transform: translateX(20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(30px);
+        opacity: 1;
     }
 }
