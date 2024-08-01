@@ -121,16 +121,6 @@ nav {
     z-index: 0;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 #topLeftBlueSmallToBig {
     position: absolute;
     height: auto;
@@ -147,37 +137,6 @@ nav {
     animation: popup .9s forwards, bounceZ 1s .9s 1;
 }
 
-@keyframes popup {
-    0% {
-        transform: scale(.25);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes bounceZ {
-
-    0%,
-    100% {
-        transform: scale(1, 1);
-    }
-
-    25% {
-        transform: scale(.97, .97);
-    }
-
-    50% {
-        transform: scale(1, 1);
-    }
-
-    75% {
-        transform: scale(.99, .99);
-    }
-}
 
 #topMidOrange {
     position: absolute;
@@ -257,8 +216,6 @@ nav {
     z-index: -.1;
 }
 
-
-
 #introText {
     margin: 10%;
     margin-left: 5%;
@@ -307,17 +264,6 @@ hr {
     max-width: 20vw;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .blackPinkAlt section {
     padding: 5%;
 }
@@ -359,6 +305,7 @@ hr {
 
 #ff {
     width: 5vw;
+    /* animation: fastForward 1.5s ease-in-out infinite; */
 }
 
 .oneOfThreeHeading {
@@ -531,19 +478,6 @@ hr {
     margin-left: 25%;
 }
 
-@media screen and (min-width: 425px) {
-
-    #two,
-    #three {
-        flex-direction: row;
-    }
-
-    #two img,
-    #three img {
-        margin-left: 0;
-    }
-}
-
 /* 
 .projectsTextFirst {
     background-image: url("../images/last-1.png");
@@ -664,6 +598,25 @@ footer .allpink {
 }
 
 
+
+
+
+
+
+
+@media screen and (min-width: 425px) {
+
+    #two,
+    #three {
+        flex-direction: row;
+    }
+
+    #two img,
+    #three img {
+        margin-left: 0;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .right button {
         display: block;
@@ -761,5 +714,72 @@ footer .allpink {
     }
     #pinkPlus {
         bottom: 25.57%;
+    }
+}
+
+
+
+
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(.25);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceZ {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(.97, .97);
+    }
+
+    50% {
+        transform: scale(1, 1);
+    }
+
+    75% {
+        transform: scale(.99, .99);
+    }
+}
+
+@keyframes fastForward {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    33% {
+        transform: translateX(10px);
+        opacity: 1;
+    }
+    66% {
+        transform: translateX(20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(30px);
+        opacity: 1;
     }
 }
