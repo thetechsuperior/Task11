@@ -278,7 +278,7 @@ hr {
 }
 
 .guestsThisYear img {
-    width: max(4vw, 3vh);
+    width: max(10vw, 3vh);
     display: block;
     margin-left: auto;
     margin-right: auto;
