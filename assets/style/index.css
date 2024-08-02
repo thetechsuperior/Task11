@@ -225,6 +225,7 @@ nav {
 
 #introText :first-child {
     font-size: clamp(1.6rem, max(4vw, 3vh), 3.6rem);
+    text-wrap: nowrap;
 }
 
 hr {
@@ -719,10 +720,6 @@ footer .allpink {
 
 
 
-
-
-
-
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -786,7 +783,7 @@ footer .allpink {
 
 @keyframes roundBounce {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(10deg);
     }
     50% {
         transform: rotate(400deg);
@@ -795,10 +792,61 @@ footer .allpink {
         transform: rotate(400deg);
     }
     100%{
-        transform:rotate(360deg);
+        transform:rotate(370deg);
     }
 }
 .socialMediaIcons img{
-    animation: roundBounce 5s ease-in-out 10;
+    animation: roundBounce 5s ease-in-out infinite;
     transition-delay: 4sec;
+}
+
+
+@keyframes vibrate{
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(1px);
+    }
+    20% {
+        transform: translateX(0px);
+    }
+    30% {
+        transform: translateX(-1px);
+    }
+    40% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    60% {
+        transform: translateY(0px);
+    }
+    70% {
+        transform: translateY(-1px);
+    }
+    80% {
+        transform: translateX(0px);
+    }
+}
+#vibrateAnimation{
+    animation: vibrate .1s ease infinite;
+}
+
+@keyframes appearDisappearFromRoof {
+    from {
+        transform: scaleY(0) translateY(-5px);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.quotationAppearDisappear {
+    animation: appearDisappearFromRoof 1s ease-out 3;
+    animation-delay: 2s;
+    
 }
