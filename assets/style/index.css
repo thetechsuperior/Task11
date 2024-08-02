@@ -547,7 +547,7 @@ footer .allpink {
 .socialMediaIcons {
     display: flex;
     justify-content: center;
-    gap: 1%;
+    gap: 3%;
 }
 
 .socialMediaIcons img {
@@ -782,4 +782,23 @@ footer .allpink {
         transform: translateX(30px);
         opacity: 1;
     }
+}
+
+@keyframes roundBounce {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(400deg);
+    }
+    70%{
+        transform: rotate(400deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.socialMediaIcons img{
+    animation: roundBounce 5s ease-in-out 10;
+    transition-delay: 4sec;
 }
